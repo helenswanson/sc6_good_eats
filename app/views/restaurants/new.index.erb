@@ -1,0 +1,45 @@
+<h3>Add a Restaurant</h3>
+
+<%= form_for @restaurant do |f| %>
+
+  <% if @restaurant.errors.any? %>
+    <ul>
+      <% @restaurant.errors.full_messages.each do |msg| %>
+        <li> <%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :address %>
+    <%= f.text_area :address %>
+  </div>
+
+  <div>
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div>
+    <%= f.label :zip_code %>
+    <%= f.text_area :zip_code %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :category %>
+    <%= f.text_area :category %>
+  </div>
+  <br/>
+
+  <%= f.submit 'Submit' %>
+<% end %>

@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: sc6_good_eats_production
-  username: sc6_good_eats
-  password: <%= ENV['SC6_GOOD_EATS_DATABASE_PASSWORD'] %>
