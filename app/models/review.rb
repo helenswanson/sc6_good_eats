@@ -6,7 +6,8 @@ class Review < ActiveRecord::Base
   # validates_inclusion_of :rating, :in => 1..5,
   #   :message => "can only be between 1 and 5."
 
-  validates :rating, null: false
+
+  validates :rating, null: false, inclusion: { within: 1..5 }
   validates :body, null: false
   validates :created_at, null: false
   validates :restaurant_id, null: false
